@@ -109,7 +109,7 @@
     <!-- Caption header -->
     <div class="caption-header text-center wow zoomInDown">
       <h5 class="fw-normal">Welcome</h5>
-      <h1 class="fw-light mb-4">I'm <b class="fg-theme">Stephen</b> Doe</h1>
+      <h1 class="fw-light mb-4">I'm <b class="fg-theme">Ricardo</b> Gubat</h1>
       <div class="badge">UI/UX & Web Designer</div>
     </div> <!-- End Caption header -->
     <div class="floating-button"><span class="ti-mouse"></span></div>
@@ -120,16 +120,16 @@
       <div class="row">
         <div class="col-lg-4 py-3">
           <div class="img-place wow fadeInUp">
-            <img src="../assets/img/person.jpg" alt="">
+            <img src="../assets/img/profpic.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 wow fadeInRight">
-          <h1 class="fw-light">Stephen Doe</h1>
-          <h5 class="fg-theme mb-3">UI/UX & Web Designer</h5>
+          <h1 class="fw-light">Ricardo Gubat</h1>
+          <h5 class="fg-theme mb-3">Web Developer</h5>
           <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form but the majority have suffered alteration in some</p>
           <ul class="theme-list">
-            <li><b>From:</b> Texas, US</li>
-            <li><b>Lives In:</b> Texas, US</li>
+            <li><b>From:</b> Manila, PH</li>
+            <li><b>Lives In:</b> Manila, PH</li>
             <li><b>Age:</b> 25</li>
             <li><b>Gender:</b> Male</li>
           </ul>
@@ -162,9 +162,9 @@
               </div>
             </div>
             <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Phyton</span>
+              <span class="caption">Android</span>
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">90%</div>
+                <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">70%</div>
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@
               </div>
             </div>
             <div class="progress-wrapper wow fadeInUp">
-              <span class="caption">Logo Design</span>
+              <span class="caption">Web Development</span>
               <div class="progress">
                 <div class="progress-bar" role="progressbar" style="width: 79%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">79%</div>
               </div>
@@ -620,7 +620,7 @@
           <div class="footer-info">
             <p>Where to find me</p>
             <hr class="divider">
-            <p class="fs-large fg-white">1600 Amphitheatre Parkway Mountain View, California 94043 US</p>
+            <p class="fs-large fg-white">353 Int. 69 Malasugue St. Coral Ext. Tondo, Manila</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 py-3">
