@@ -748,20 +748,29 @@
 			e.preventDefault();
       var name = $('input[name="txtName"]').val();
 			var number = $('input[name="txtContactNumber"]').val();
-			$.ajax({
-        type: 'post',
-        url  : '<?php echo base_url('main/sendTxt');?>',
-        data : {name:name, number:number},
-        success: function(response){ 
-					Swal.fire({
-						position: 'top-end',
-						icon: 'success',
-						title: 'Text Message has been sent!',
-						showConfirmButton: false,
-						timer: 1500
-					})
-        }
-      });
+			if(number.length == 11){
+				$.ajax({
+					type: 'post',
+					url  : '<?php echo base_url('main/sendTxt');?>',
+					data : {name:name, number:number},
+					success: function(response){ 
+						Swal.fire({
+							position: 'top-end',
+							icon: 'success',
+							title: 'Text Message has been sent!',
+							showConfirmButton: false,
+							timer: 1500
+						})
+					}
+				});
+			}else{
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Contact Number must be 11 numbers!'
+				})
+			}
+			
 		});
 	</script>
   
