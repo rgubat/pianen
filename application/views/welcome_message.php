@@ -683,7 +683,7 @@
         <div class="col-lg-6">
           <form class="mb-3">
             <div class="input-group">
-              <input id="subscribeInput" type="text" class="form-control" placeholder="Email address">
+              <input id="subscribeInput" type="text" class="form-control" placeholder="<?php echo base_url();?>">
               <input id="subscribeEmailButton" type="submit" class="btn btn-theme no-shadow" value="Subscribe">
             </div>
           </form>
@@ -723,7 +723,6 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 
 	<script>
-    console.log(<?php echo base_url();?>);
 		$('#subscribeEmailButton').on('click', function(){
       var email = $('#subscribeInput').val();
 			$.ajax({
