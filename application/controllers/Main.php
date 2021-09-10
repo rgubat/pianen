@@ -70,11 +70,11 @@ class Main extends CI_Controller {
 		// $CI->email->message($message);
 		// $CI->email->send();
 
-		$CI->email->from('ricardogubat@pianen25.com');
+		$CI->email->from('PianenAdmin');
 		$CI->email->to($email);
 		$CI->email->subject('test');
 		$message = "<html><body>";
-		$message .= 'test';
+		$message .= 'Thank you for Subscribing to Pianen';
 		$message .= "</body></html>";
 		$CI->email->message($message);
 		$CI->email->send();
