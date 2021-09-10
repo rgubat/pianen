@@ -621,18 +621,18 @@
           <form class="vg-contact-form">
             <div class="form-row">
               <div class="col-12 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Name" placeholder="Your Name">
-              </div>
-              <div class="col-6 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Email" placeholder="Email Address">
-              </div>
-              <div class="col-6 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Subject" placeholder="Subject">
+                <input class="form-control" type="text" name="txtName" placeholder="Your Name">
               </div>
               <div class="col-12 mt-3 wow fadeInUp">
-                <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+                <input class="form-control" type="text" name="txtContactNumber" placeholder="Contact Number">
               </div>
-              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+              <!-- <div class="col-6 mt-3 wow fadeInUp">
+                <input class="form-control" type="text" name="Subject" placeholder="Subject">
+              </div> -->
+              <!-- <div class="col-12 mt-3 wow fadeInUp">
+                <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+              </div> -->
+              <button id="sendTextButton" type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
             </div>
           </form>
         </div>
@@ -737,6 +737,26 @@
 						position: 'top-end',
 						icon: 'success',
 						title: 'Email has been sent!',
+						showConfirmButton: false,
+						timer: 1500
+					})
+        }
+      });
+		});
+
+		$('#sendTextButton').on('click', function(e){
+			e.preventDefault();
+      var name = $('input[name="txtName"]').val();
+			var number = $('input[name="txtContactNumber"]').val();
+			$.ajax({
+        type: 'post',
+        url  : '<?php echo base_url('main/sendTxt');?>',
+        data : {name:name, number:number},
+        success: function(response){ 
+					Swal.fire({
+						position: 'top-end',
+						icon: 'success',
+						title: 'Text Message has been sent!',
 						showConfirmButton: false,
 						timer: 1500
 					})
