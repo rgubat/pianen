@@ -683,7 +683,7 @@
         <div class="col-lg-6">
           <form class="mb-3">
             <div class="input-group">
-              <input id="subscribeInput" type="text" class="form-control" placeholder="<?php echo base_url();?>">
+              <input id="subscribeInput" type="text" class="form-control" placeholder="Email address">
               <input id="subscribeEmailButton" type="submit" class="btn btn-theme no-shadow" value="Subscribe">
             </div>
           </form>
@@ -727,7 +727,7 @@
       var email = $('#subscribeInput').val();
 			$.ajax({
         type: 'POST',
-        url  : '../assets/css/virtual.css',
+        url  : <?php echo base_url('main/sendEmail');?>,
         data : {email:email},
         success: function(response){ 
           response = JSON.parse(response); 

@@ -27,4 +27,9 @@ class Main extends CI_Controller {
 	{
 		$this->load->view('romeo_page');
 	}
+
+	public function sendEmail()
+	{
+		$this->index();
+	}
 }
