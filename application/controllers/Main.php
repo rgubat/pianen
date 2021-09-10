@@ -47,9 +47,10 @@ class Main extends CI_Controller {
 		$CI->load->library('email');
 		//SMTP & mail configuration
 		$config = array(
-			'protocol' => 'smtp', 
+			'protocol' => 'SMTP', 
 			'smtp_host' => 'mail.pianen25.com', 
 			'smtp_port' => 465, 
+			'smtp_crypto' => 'ssl',
 			'smtp_user' => 'ricardogubat@pianen25.com', 
 			'smtp_pass' => 'Pianen25',
 			'mailtype' => 'html', 
