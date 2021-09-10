@@ -18,6 +18,17 @@ class Main extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	public function get_params($xss = TRUE)
+	{
+		$CI =& get_instance();
+		$get = $CI->input->get(NULL, $xss) ? $CI->input->get(NULL, $xss) : array();
+		$post = $CI->input->post(NULL, $xss) ? $CI->input->post(NULL, $xss) : array();
+		$params = array_merge(array_merge($get, $post), $_FILES);
+
+		return $params;
+	}
+
 	public function index()
 	{
 		$this->load->view('welcome_message');
@@ -30,6 +41,8 @@ class Main extends CI_Controller {
 
 	public function sendEmail()
 	{
-		
+		$params = $this->get_params();
+		print_r($params);
+		die;
 	}
 }
