@@ -723,7 +723,8 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 
 	<script>
-		$('#subscribeEmailButton').on('click', function(){
+		$('#subscribeEmailButton').on('click', function(e){
+			e.preventDefault();
       var email = $('#subscribeInput').val();
 			$.ajax({
         type: 'POST',
