@@ -30,6 +30,6 @@ class Main extends CI_Controller {
 
 	public function sendEmail()
 	{
-		$this->load->view('romeo_page');
+		
 	}
 }
