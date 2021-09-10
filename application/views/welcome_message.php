@@ -720,6 +720,8 @@
     
   <script src="../assets/js/topbar-virtual.js"></script>
 
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
 
 	<script>
@@ -731,17 +733,13 @@
         url  : '<?php echo base_url('main/sendEmail');?>',
         data : {email:email},
         success: function(response){ 
-					// window.location.href = '<?php //echo base_url('main/sendEmail');?>';
-          // response = JSON.parse(response); 
-          // setTimeout(() => {
-          //   swal({
-          //     title: response.status,
-          //     text: response.message,
-          //     type: response.status.toLowerCase()
-          //   }, function() {
-          //     window.location.href = path+'web-portal/application';
-          //   });
-          // }, 2000);
+					Swal.fire({
+						position: 'top-end',
+						icon: 'success',
+						title: 'Your work has been saved',
+						showConfirmButton: false,
+						timer: 1500
+					})
         }
       });
 		});

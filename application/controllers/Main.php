@@ -70,48 +70,11 @@ class Main extends CI_Controller {
 		// $CI->email->message($message);
 		// $CI->email->send();
 
-		$CI->email->from('PianenAdmin');
+		$CI->email->from('PianenAdmin@pianen25.com');
 		$CI->email->to($email);
-		$CI->email->subject('test');
+		$CI->email->subject('Thank You!');
 		$message = "<html><body>";
 		$message .= 'Thank you for Subscribing to Pianen';
-		$message .= "</body></html>";
-		$CI->email->message($message);
-		$CI->email->send();
-	}
-
-	public function sendMail($senderEmail,$receiverEmail,$subject,$body,$headers=''){
-		$CI =& get_instance();
-		$CI->load->library('email');
-		//SMTP & mail configuration
-		$config = array(
-			'protocol' => 'smtp', 
-			'smtp_host' => 'mail.pianen25.com', 
-			'smtp_port' => 465, 
-			'smtp_user' => 'ricardogubat@pianen25.com', 
-			'smtp_pass' => 'Pianen25',
-			'mailtype' => 'html', 
-			'charset' => 'iso-8859-1'
-		);
-	
-		$CI->email->initialize($config);
-		$CI->email->set_mailtype("html");
-		$CI->email->set_newline("\r\n");
-	
-		// $CI->email->from('ricardogubat@pianen25.com');
-		// $CI->email->to($receiverEmail);
-		// $CI->email->subject($subject);
-		// $message = "<html><body>";
-		// $message .= $body;
-		// $message .= "</body></html>";
-		// $CI->email->message($message);
-		// $CI->email->send();
-
-		$CI->email->from('ricardogubat@pianen25.com');
-		$CI->email->to('gubatricardo@gmail.com');
-		$CI->email->subject($subject);
-		$message = "<html><body>";
-		$message .= $body;
 		$message .= "</body></html>";
 		$CI->email->message($message);
 		$CI->email->send();
