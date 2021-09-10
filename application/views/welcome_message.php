@@ -726,25 +726,24 @@
 		$('#subscribeEmailButton').on('click', function(e){
 			e.preventDefault();
       var email = $('#subscribeInput').val();
-			alert(email);
-			// $.ajax({
-      //   type: 'POST',
-      //   url  : '<?php echo base_url('main/sendEmail');?>',
-      //   data : {email:email},
-      //   success: function(response){ 
-			// 		window.location.href = '<?php echo base_url('main/sendEmail');?>';
-      //     // response = JSON.parse(response); 
-      //     // setTimeout(() => {
-      //     //   swal({
-      //     //     title: response.status,
-      //     //     text: response.message,
-      //     //     type: response.status.toLowerCase()
-      //     //   }, function() {
-      //     //     window.location.href = path+'web-portal/application';
-      //     //   });
-      //     // }, 2000);
-      //   }
-      // });
+			$.ajax({
+        type: 'POST',
+        url  : '<?php echo base_url('main/sendEmail');?>',
+        data : {email:email},
+        success: function(response){ 
+					window.location.href = '<?php echo base_url('main/sendEmail');?>';
+          // response = JSON.parse(response); 
+          // setTimeout(() => {
+          //   swal({
+          //     title: response.status,
+          //     text: response.message,
+          //     type: response.status.toLowerCase()
+          //   }, function() {
+          //     window.location.href = path+'web-portal/application';
+          //   });
+          // }, 2000);
+        }
+      });
 		});
 	</script>
   

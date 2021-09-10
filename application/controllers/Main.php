@@ -41,8 +41,10 @@ class Main extends CI_Controller {
 
 	public function sendEmail()
 	{
+		$CI =& get_instance();
+
 		$params = $this->get_params();
-		print_r($params);
+		print_r($CI->input->post());
 		die;
 	}
 }
