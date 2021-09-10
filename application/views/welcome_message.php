@@ -624,7 +624,7 @@
                 <input class="form-control" type="text" name="txtName" placeholder="Your Name">
               </div>
               <div class="col-12 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="txtContactNumber" placeholder="Contact Number">
+                <input class="form-control" type="number" name="txtContactNumber" placeholder="Contact Number">
               </div>
               <!-- <div class="col-6 mt-3 wow fadeInUp">
                 <input class="form-control" type="text" name="Subject" placeholder="Subject">
