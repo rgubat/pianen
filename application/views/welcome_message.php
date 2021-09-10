@@ -731,7 +731,7 @@
         url  : '<?php echo base_url('main/sendEmail');?>',
         data : {email:email},
         success: function(response){ 
-					window.location.href = '<?php echo base_url('main/sendEmail');?>';
+					//window.location.href = '<?php //echo base_url('main/sendEmail');?>';
           // response = JSON.parse(response); 
           // setTimeout(() => {
           //   swal({
