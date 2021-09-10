@@ -684,7 +684,7 @@
           <form class="mb-3">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Email address">
-              <input type="submit" class="btn btn-theme no-shadow" value="Subscribe">
+              <input id="subscribeEmailButton" type="submit" class="btn btn-theme no-shadow" value="Subscribe">
             </div>
           </form>
         </div>
@@ -721,6 +721,12 @@
   <script src="../assets/js/topbar-virtual.js"></script>
 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+
+	<script>
+		$('#subscribeEmailButton').on('click', function(){
+			alert('12');
+		});
+	</script>
   
 </body>
 </html>
