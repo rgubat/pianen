@@ -727,7 +727,7 @@
       var email = $('#subscribeInput').val();
 			$.ajax({
         type: 'POST',
-        url  : <?php echo base_url('main/sendEmail');?>,
+        url  : '<?php echo base_url('main/sendEmail');?>',
         data : {email:email},
         success: function(response){ 
           response = JSON.parse(response); 
